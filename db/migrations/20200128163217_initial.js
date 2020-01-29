@@ -24,8 +24,8 @@ exports.up = function(knex) {
       table.integer('cool');
       table.string('text');
       table.string('date');
-      table.integer('business_id').unsigned();
-      table.foreign('business_id').references('businesses.id');
+      table.integer('business_id_primary').unsigned();
+      table.foreign('business_id_primary').references('businesses.id');
 
       table.timestamps(true, true);
     })
